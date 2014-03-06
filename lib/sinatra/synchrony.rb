@@ -3,7 +3,8 @@ require 'rack/fiber_pool'
 require 'eventmachine'
 require 'em-http-request'
 require 'em-synchrony'
-require 'em-resolv-replace'
+# em-resolv-replace breaks newrelic_rpm
+#require 'em-resolv-replace'
 
 module Sinatra
   module Synchrony
